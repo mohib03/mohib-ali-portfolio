@@ -1,4 +1,4 @@
-# 💼 Mohib Ali Portfolio
+# 💼 Mohib Ali - Portfolio
 
 Welcome to my personal portfolio website! This project showcases my skills, projects, and experience in **Cloud Engineering**, **DevOps**, and **Web Development**.
 
