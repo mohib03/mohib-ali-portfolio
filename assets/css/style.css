@@ -102,6 +102,7 @@ section {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+<<<<<<< HEAD
 /* Experience Section */
 #experience {
     background: var(--secondary-gradient);
@@ -250,6 +251,8 @@ section {
     color: var(--accent-color) !important;
 }
 
+=======
+>>>>>>> 1a73f702fe01023e56d6201bda162b179c0b2fb7
 /* Skills Section */
 #skills {
     background: var(--white-color);
@@ -393,6 +396,7 @@ footer a:hover {
     animation: fadeInUp 0.3s ease;
 }
 
+<<<<<<< HEAD
 /* Typewriter Effect */
 #typewriter {
     border-right: 2px solid cornflowerblue;
@@ -404,6 +408,8 @@ footer a:hover {
     51%, 100% { border-color: transparent; }
 }
 
+=======
+>>>>>>> 1a73f702fe01023e56d6201bda162b179c0b2fb7
 /* Animations */
 @keyframes fadeInUp {
     from {

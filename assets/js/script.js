@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // EmailJS Configuration
 const EMAILJS_CONFIG = {
     SERVICE_ID: 'your_actual_service_id',
@@ -12,12 +13,18 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize all functionality
     initTypewriter();
+=======
+// DOM Content Loaded Event
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize all functionality
+>>>>>>> 1a73f702fe01023e56d6201bda162b179c0b2fb7
     initSmoothScrolling();
     initScrollToTop();
     initFormValidation();
     initProgressBars();
 });
 
+<<<<<<< HEAD
 // Typewriter Effect
 function initTypewriter() {
     const typewriterElement = document.getElementById('typewriter');
@@ -35,6 +42,8 @@ function initTypewriter() {
     typeText();
 }
 
+=======
+>>>>>>> 1a73f702fe01023e56d6201bda162b179c0b2fb7
 // Smooth Scrolling for Navigation Links
 function initSmoothScrolling() {
     const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
@@ -122,6 +131,7 @@ function initFormValidation() {
             isValid = false;
         }
         
+<<<<<<< HEAD
         // If form is valid, send email
         if (isValid) {
             sendEmail({
@@ -129,6 +139,12 @@ function initFormValidation() {
                 email: email.value.trim(),
                 message: message.value.trim()
             }, contactForm);
+=======
+        // If form is valid, show success message
+        if (isValid) {
+            showSuccessMessage();
+            contactForm.reset();
+>>>>>>> 1a73f702fe01023e56d6201bda162b179c0b2fb7
         }
     });
 }
@@ -161,6 +177,7 @@ function resetValidation(elements) {
     });
 }
 
+<<<<<<< HEAD
 // Send Email using EmailJS
 function sendEmail(formData, form) {
     const submitBtn = form.querySelector('button[type="submit"]');
@@ -205,6 +222,14 @@ function showAlert(type, message) {
     alertDiv.className = `alert alert-${type} alert-dismissible fade show mt-3`;
     alertDiv.innerHTML = `
         <strong>${type === 'success' ? 'Success!' : 'Error!'}</strong> ${message}
+=======
+function showSuccessMessage() {
+    // Create success alert
+    const alertDiv = document.createElement('div');
+    alertDiv.className = 'alert alert-success alert-dismissible fade show mt-3';
+    alertDiv.innerHTML = `
+        <strong>Success!</strong> Your message has been sent successfully.
+>>>>>>> 1a73f702fe01023e56d6201bda162b179c0b2fb7
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
     `;
     
