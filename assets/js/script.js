@@ -23,12 +23,25 @@ function initTypewriter() {
     const typewriterElement = document.getElementById('typewriter');
     const text = 'Mohib Ali';
     let index = 0;
+    let isDeleting = false;
     
     function typeText() {
-        if (index < text.length) {
+        if (!isDeleting && index < text.length) {
             typewriterElement.textContent += text.charAt(index);
             index++;
             setTimeout(typeText, 150);
+        } else if (!isDeleting && index === text.length) {
+            setTimeout(() => {
+                isDeleting = true;
+                typeText();
+            }, 3000);
+        } else if (isDeleting && index > 0) {
+            typewriterElement.textContent = text.substring(0, index - 1);
+            index--;
+            setTimeout(typeText, 100);
+        } else if (isDeleting && index === 0) {
+            isDeleting = false;
+            setTimeout(typeText, 500);
         }
     }
     
