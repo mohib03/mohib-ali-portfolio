@@ -16,6 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollToTop();
     initFormValidation();
     initProgressBars();
+<<<<<<< HEAD
+=======
+    initScrollAnimations();
+>>>>>>> facd50f (update portfolio on 29-06)
 });
 
 // Typewriter Effect
@@ -178,16 +182,25 @@ function resetValidation(elements) {
 function sendEmail(formData, form) {
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
+<<<<<<< HEAD
     
     // Show loading state
     submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending...';
     submitBtn.disabled = true;
     
     // EmailJS template parameters
+=======
+
+    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending...';
+    submitBtn.disabled = true;
+
+    // Template parameters for EmailJS
+>>>>>>> facd50f (update portfolio on 29-06)
     const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
+<<<<<<< HEAD
         to_email: 'mohibsolanki@gmail.com'
     };
     
@@ -203,11 +216,31 @@ function sendEmail(formData, form) {
         })
         .finally(function() {
             // Reset button state
+=======
+        // to_name: 'Mohib Ali'
+        to_email: 'mohibsolanki@gmail.com'
+    };
+
+    emailjs.send(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, templateParams)
+        .then(() => {
+            showAlert('success', 'Thank you for your message! I will get back to you soon.');
+            form.reset();
+        })
+        .catch((error) => {
+            console.error('EmailJS error:', error);
+            showAlert('danger', 'Something went wrong. Please try again later.');
+        })
+        .finally(() => {
+>>>>>>> facd50f (update portfolio on 29-06)
             submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
         });
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> facd50f (update portfolio on 29-06)
 function showAlert(type, message) {
     // Remove existing alerts
     const existingAlerts = document.querySelectorAll('.alert');
